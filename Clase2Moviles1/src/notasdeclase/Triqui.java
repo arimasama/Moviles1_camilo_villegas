@@ -12,16 +12,30 @@ public class Triqui {
 
         public static void main(String[] args) {
 
-        System.out.println("Nombre del jugador 1: ");
-        player1 = sc.nextLine();
-        System.out.println("Nombre del jugador 2: ");
-        player2 = sc.nextLine();
+        while (true) {
+            System.out.println("Bienvenido a Tetrix\n" +
+            "1.jugar\n" +
+            "2.salir"
+            );
+            int juego = sc.nextInt();
+            sc.nextLine();
 
-        llenar(board);
+            if (juego == 1) {
+                System.out.println("Nombre del jugador 1: ");
+                player1 = sc.nextLine();
+                System.out.println("Nombre del jugador 2: ");
+                player2 = sc.nextLine();
 
-        dibujar(board);
+                llenar(board);
 
-        play(board);
+                dibujar(board);
+
+                play(board);
+            } else {
+                System.out.println("Saliendo del juego.");
+                break;
+            }
+        }
 
     }
         public static void llenar(char[][] board) {
