@@ -14,7 +14,10 @@ public class CtaAhorro {
 
 
     public static void main(String[] args) {
+        app();
+    }
 
+    public static void app(){
         validacionDeUsuario = inicioSesion(false);
 
         if (!validacionDeUsuario) {
@@ -30,8 +33,8 @@ public class CtaAhorro {
         }
 
         while (opcionElegida == 5) {
-        System.out.println("Cerrando sesión.");
-        break;
+            System.out.println("Cerrando sesión.");
+            break;
         }
     }
 
@@ -100,8 +103,8 @@ public class CtaAhorro {
 
         return opcionConfirmacion;
     }
-    public static int consignacion(int opcionElegida) {
-        if (opcionElegida == 1) {
+    public static int consignacion(int opcionIngresada) {
+        if (opcionIngresada == 1) {
             boolean opcionConsignacion = false;
             while (!opcionConsignacion) {
                 System.out.println("Ingrese el valor a consignar:");
@@ -123,8 +126,8 @@ public class CtaAhorro {
         }
         return saldoCtaAhorro;
     }
-    public static int retiro(int opcionElegida) {
-        if (opcionElegida == 2) {
+    public static int retiro(int opcionIngresada) {
+        if (opcionIngresada == 2) {
             boolean opcionConsignacion = false;
             while (opcionConsignacion == false) {
                 System.out.println("Ingrese el valor a Retirar:");
@@ -148,8 +151,8 @@ public class CtaAhorro {
         }
         return saldoCtaAhorro;
     }
-    public static int transferencia(int opcionElegida) {
-        if (opcionElegida == 3) {
+    public static int transferencia(int opcionIngresada) {
+        if (opcionIngresada == 3) {
             boolean opcionTransferencia = false;
             while (!opcionTransferencia) {
                 System.out.println("Ingrese el valor a transferir:");
@@ -173,8 +176,8 @@ public class CtaAhorro {
         }
         return saldoCtaAhorro;
     }
-    public static int saldo(int opcionElegida) {
-        while (opcionElegida == 4) {
+    public static int saldo(int opcionIngresada) {
+        while (opcionIngresada == 4) {
             System.out.println("Su Saldo es: " + saldoCtaAhorro);
             break;
         }

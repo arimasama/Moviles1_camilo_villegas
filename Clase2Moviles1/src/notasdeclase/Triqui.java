@@ -11,11 +11,14 @@ public class Triqui {
         static char[][] board = new char [3][3];
 
         public static void main(String[] args) {
+            play();
+    }
+    public static void play(){
 
         while (true) {
             System.out.println("Bienvenido a Tetrix\n" +
-            "1.jugar\n" +
-            "2.salir"
+                    "1.jugar\n" +
+                    "2.salir"
             );
             int juego = sc.nextInt();
             sc.nextLine();
@@ -36,7 +39,6 @@ public class Triqui {
                 break;
             }
         }
-
     }
         public static void llenar(char[][] board) {
 
